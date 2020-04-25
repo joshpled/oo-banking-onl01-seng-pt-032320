@@ -12,7 +12,6 @@ class Transfer
     @sender.valid? && @receiver.valid? ? true : false
   end
 
-
   def execute_transaction
     if self.valid? && @sender.balance >= @amount && @status == "pending" && @reject_transfer = false
       @sender.balance -= @amount
